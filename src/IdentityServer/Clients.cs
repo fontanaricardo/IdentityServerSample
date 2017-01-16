@@ -14,14 +14,6 @@ namespace IdentityServer
             return new List<Client> 
             {
                 new Client {
-                    ClientId = "oauthClient",
-                    ClientName = "Example Client Credentials Client Application",
-                    AllowedGrantTypes = GrantTypes.ClientCredentials,
-                    ClientSecrets = new List<Secret> {
-                        new Secret("superSecretPassword".Sha256())},
-                    AllowedScopes = new List<string> {"customAPI.read"}
-                },
-                new Client {
                     ClientId = "openIdConnectClient",
                     ClientName = "Example Implicit Client Application",
                     AllowedGrantTypes = GrantTypes.Implicit,
@@ -33,8 +25,8 @@ namespace IdentityServer
                         "role",
                         "customAPI"
                     },
-                    RedirectUris = new List<string> {"https://localhost:44330/signin-oidc"},
-                    PostLogoutRedirectUris = new List<string> {"https://localhost:44330"}
+                    RedirectUris = new List<string> {"http://localhost:5001/signin-oidc"},
+                    PostLogoutRedirectUris = new List<string> {"http://localhost:5001/"}
                 }
             };
         }
