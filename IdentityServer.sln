@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "IdentityServer", "src\IdentityServer\IdentityServer.xproj", "{FF67D04F-03EE-4DEA-ACDB-8CAB4411C9B7}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Client", "Client\Client.xproj", "{C20CF0BE-B6D7-4460-BC62-E08DB1EC19B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +24,16 @@ Global
 		{FF67D04F-03EE-4DEA-ACDB-8CAB4411C9B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF67D04F-03EE-4DEA-ACDB-8CAB4411C9B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF67D04F-03EE-4DEA-ACDB-8CAB4411C9B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C20CF0BE-B6D7-4460-BC62-E08DB1EC19B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C20CF0BE-B6D7-4460-BC62-E08DB1EC19B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C20CF0BE-B6D7-4460-BC62-E08DB1EC19B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C20CF0BE-B6D7-4460-BC62-E08DB1EC19B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FF67D04F-03EE-4DEA-ACDB-8CAB4411C9B7} = {3E1CF567-E44D-4348-B204-6E648D2C7243}
+		{C20CF0BE-B6D7-4460-BC62-E08DB1EC19B2} = {3E1CF567-E44D-4348-B204-6E648D2C7243}
 	EndGlobalSection
 EndGlobal
