@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using IdentityServer4.Models;
+using Serilog;
 
 namespace IdentityServer
 {
@@ -31,14 +32,19 @@ namespace IdentityServer
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             app.UseIdentityServer();
+            
+            loggerFactory.AddConsole();            
 
-            loggerFactory.AddConsole();
+            Log.Logger = new LoggerConfiguration()
+            .MinimumLevel.Debug()
+            .WriteTo.ColoredConsole()
+            .CreateLogger();
 
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
         }
