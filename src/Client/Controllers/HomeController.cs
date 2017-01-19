@@ -33,5 +33,22 @@ namespace Client.Controllers
         {
             return View();
         }
+
+        [Authorize]
+        public async Task<IActionResult> CallApi()
+        {
+            var accessToken = await HttpContext.Authentication.GetTokenAsync("access_token");
+            var client = new HttpClient 
+            {
+                BaseAddress = new Uri(_apiSettings.Value.BaseAddress)
+            };
+            
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+
+            var response = await client.GetStringAsync("/claims");
+            ViewBag.Json = JArray.Parse(response).ToString();
+
+            return View();
+        }
     }
 }
